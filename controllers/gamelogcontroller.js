@@ -31,7 +31,7 @@ router.put("/updatelisting/:id", (req, res) => {
 });
 
 router.delete("/deletelisting/:id", (req, res) => {
-  GameLog.update(req.body, { where: { id: req.params.id, owner: req.user.id } })
+  GameLog.destroy({ where: { id: req.params.id, owner: req.user.id } })
     .then(result =>
       res.status(200).json({ result: result, message: "delete successful" })
     )
