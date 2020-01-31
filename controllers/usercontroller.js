@@ -16,7 +16,7 @@ router.post("/signup", (req, res) => {
       });
 
       res.json({
-        // user: user,
+        user: user,
         message: "user created!",
         sessionToken: token
       });
