@@ -21,7 +21,7 @@ router.post("/signup", (req, res) => {
         sessionToken: token
       });
     })
-    .catch(err => res.send(500, err));
+    .catch(err => res.send(500, { error: err }));
 });
 
 router.post("/signin", (req, res) => {

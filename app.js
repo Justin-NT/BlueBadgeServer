@@ -6,6 +6,7 @@ const user = require("./controllers/usercontroller");
 const gameLog = require("./controllers/gamelogcontroller");
 
 sequelize.sync();
+// sequelize.sync({ force: true });
 app.use(express.json());
 
 app.use(require("./middleware/headers"));

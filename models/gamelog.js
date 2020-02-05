@@ -2,7 +2,8 @@ module.exports = (sequelize, DataTypes) => {
   const GameLog = sequelize.define("gameLog", {
     title: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      unique: true
     },
     backgroundImage: {
       type: DataTypes.STRING,
